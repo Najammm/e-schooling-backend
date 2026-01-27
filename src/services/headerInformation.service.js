@@ -44,9 +44,6 @@ const updateHeaderInformationById = async (headerInformationId, updateBody) => {
   if (!headerInformation) {
     throw new ApiError(httpStatus.NOT_FOUND, 'HeaderInformation not found');
   }
-  if (updateBody.email && (await HeaderInformation.isEmailTaken(updateBody.email, headerInformationId))) {
-    throw new ApiError(httpStatus.BAD_REQUEST, 'Email already taken');
-  }
   Object.assign(headerInformation, updateBody);
   await headerInformation.save();
   return headerInformation;

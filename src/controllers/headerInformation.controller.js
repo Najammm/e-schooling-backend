@@ -10,7 +10,7 @@ const createHeaderInformation = catchAsync(async (req, res) => {
 });
 
 const getHeaderInformations = catchAsync(async (req, res) => {
-  const filter = pick(req.query, ['email', 'phone', 'facebook', 'twitter', 'linked']);
+  const filter = pick(req.query, ['email', 'phone', 'facebook', 'twitter', 'linkedin']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
   const result = await headerInformationService.queryHeaderInformation(filter, options);
   res.send(result);

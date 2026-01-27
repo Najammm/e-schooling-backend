@@ -17,15 +17,18 @@ const headerInformationSchema = mongoose.Schema(
     },
     facebook: {
       type: String,
+      required: false,
       trim: true,
     },
     twitter: {
       type: String,
       trim: true,
+      required: false,
     },
     linkedin: {
       type: String,
       trim: true,
+      required: false,
     },
   },
   {
