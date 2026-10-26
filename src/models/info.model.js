@@ -7,11 +7,11 @@ const infoSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    // number: {
-    //   type: Number,
-    //   required: true,
-    //   trim: true,
-    // },
+    number: {
+      type: Number,
+      required: true,
+      trim: true,
+    },
   },
   {
     timestamps: true,
